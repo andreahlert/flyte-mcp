@@ -1,70 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0f0f0f"/>
-      <stop offset="1" stop-color="#050505"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace">
+  <style>
+    .fade { opacity: 0; animation: fin 0.35s forwards; }
+    @keyframes fin { to { opacity: 1 } }
+    .t  { fill: #e6edf3; font-size: 13px; }
+    .d  { fill: #8b949e; font-size: 13px; }
+    .dd { fill: #6e7681; font-size: 13px; }
+    .b  { font-weight: 600; }
+    .prompt { fill: #d97757; font-size: 14px; font-weight: 700; }
+    .bullet { fill: #d97757; font-size: 14px; }
+    .ok     { fill: #3fb950; font-size: 12px; }
+    .kw { fill: #ff7b72; }
+    .fn { fill: #d2a8ff; }
+    .st { fill: #a5d6ff; }
+    .nu { fill: #79c0ff; }
+    .ty { fill: #ffa657; }
+    .cm { fill: #8b949e; font-style: italic; }
+    .dec { fill: #7ee787; }
+  </style>
 
-  <rect width="820" height="500" rx="10" fill="url(#bg)"/>
+  <rect width="900" height="520" rx="10" fill="#0d1117"/>
 
-  <!-- prompt line -->
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.2s" fill="freeze"/>
-    <text x="24" y="42" fill="#d97757" font-size="14" font-weight="700">&gt;</text>
-    <text x="44" y="42" fill="#e5e5e5" font-size="14">how do I cache a flyte v2 task and invalidate on input change?</text>
+  <!-- top chrome: subtle header strip with cwd -->
+  <text x="24" y="28" class="dd">~/projects/flyte-demo</text>
+  <line x1="24" y1="40" x2="876" y2="40" stroke="#21262d"/>
+
+  <!-- user prompt -->
+  <g class="fade" style="animation-delay:.1s">
+    <text x="24" y="76" class="prompt">&gt;</text>
+    <text x="44" y="76" class="t">how do I cache a flyte v2 task and invalidate on input change?</text>
   </g>
 
-  <!-- tool call 1 -->
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.2s" fill="freeze"/>
-    <text x="24" y="82" fill="#b48eff" font-size="14">●</text>
-    <text x="44" y="82" fill="#e5e5e5" font-size="14" font-weight="600">flyte - get_flyte_symbol <tspan fill="#8a8a8a" font-weight="400">(MCP)</tspan></text>
-    <text x="44" y="100" fill="#8a8a8a" font-size="13">  name: "Cache"</text>
-    <text x="44" y="120" fill="#6c6c6c" font-size="13">⎿ <tspan fill="#a0a0a0">class Cache — cache configuration with auto/override/manual behavior</tspan></text>
+  <!-- tool 1 -->
+  <g class="fade" style="animation-delay:.9s">
+    <text x="24" y="120" class="bullet">●</text>
+    <text x="44" y="120" class="t b">flyte - get_flyte_symbol</text>
+    <text x="215" y="120" class="t">(name: <tspan class="st">"Cache"</tspan>)</text>
+    <text x="335" y="120" class="d">(MCP)</text>
+    <text x="44" y="140" class="d">  ⎿  <tspan class="dd">class Cache — cache configuration: auto | override | manual (1 match)</tspan></text>
   </g>
 
-  <!-- tool call 2 -->
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.0s" fill="freeze"/>
-    <text x="24" y="158" fill="#b48eff" font-size="14">●</text>
-    <text x="44" y="158" fill="#e5e5e5" font-size="14" font-weight="600">flyte - get_flyte_pattern <tspan fill="#8a8a8a" font-weight="400">(MCP)</tspan></text>
-    <text x="44" y="176" fill="#8a8a8a" font-size="13">  theme: "caching"</text>
-    <text x="44" y="196" fill="#6c6c6c" font-size="13">⎿ <tspan fill="#a0a0a0">examples/caching/content_based_caching.py</tspan></text>
+  <!-- tool 2 -->
+  <g class="fade" style="animation-delay:1.5s">
+    <text x="24" y="178" class="bullet">●</text>
+    <text x="44" y="178" class="t b">flyte - get_flyte_pattern</text>
+    <text x="225" y="178" class="t">(theme: <tspan class="st">"caching"</tspan>)</text>
+    <text x="360" y="178" class="d">(MCP)</text>
+    <text x="44" y="198" class="d">  ⎿  <tspan class="dd">examples/caching/content_based_caching.py (73 lines)</tspan></text>
   </g>
 
-  <!-- answer text -->
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.8s" fill="freeze"/>
-    <text x="24" y="238" fill="#e5e5e5" font-size="14">Use <tspan fill="#d97757">flyte.Cache</tspan> on the task decorator. Behavior <tspan fill="#d97757">"auto"</tspan> hashes inputs</text>
-    <text x="24" y="258" fill="#e5e5e5" font-size="14">automatically, so re-runs only when the signature or arguments change.</text>
+  <!-- answer -->
+  <g class="fade" style="animation-delay:2.1s">
+    <text x="24" y="240" class="t">Put <tspan class="st">flyte.Cache</tspan> on the task decorator. Behavior <tspan class="st">"auto"</tspan> hashes the function</text>
+    <text x="24" y="260" class="t">body and inputs — re-runs fire only when the hash changes.</text>
   </g>
 
   <!-- code block -->
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="0.4s" begin="3.3s" fill="freeze"/>
-    <rect x="24" y="280" width="760" height="180" rx="6" fill="#1a1a1a" stroke="#2a2a2a"/>
-    <text x="36" y="304" fill="#ff7b72" font-size="13">import</text>
-    <text x="86" y="304" fill="#e5e5e5" font-size="13">flyte</text>
-
-    <text x="36" y="326" fill="#e5e5e5" font-size="13">env = flyte.TaskEnvironment(name=<tspan fill="#a5d6ff">"trainer"</tspan>)</text>
-
-    <text x="36" y="362" fill="#7ee787" font-size="13">@env.task(</text>
-    <text x="52" y="380" fill="#e5e5e5" font-size="13">cache=flyte.Cache(behavior=<tspan fill="#a5d6ff">"auto"</tspan>, serialize=<tspan fill="#79c0ff">True</tspan>),</text>
-    <text x="36" y="398" fill="#7ee787" font-size="13">)</text>
-
-    <text x="36" y="418" fill="#ff7b72" font-size="13">async def</text>
-    <text x="106" y="418" fill="#d2a8ff" font-size="13">train</text>
-    <text x="144" y="418" fill="#e5e5e5" font-size="13">(epochs: <tspan fill="#ffa657">int</tspan>) -&gt; <tspan fill="#ffa657">dict</tspan>:</text>
-
-    <text x="52" y="438" fill="#8a8a8a" font-size="13" font-style="italic"># cached by (epochs); re-runs only when the value changes</text>
+  <g class="fade" style="animation-delay:2.6s">
+    <rect x="24" y="284" width="852" height="196" rx="8" fill="#161b22" stroke="#21262d"/>
+    <text x="40" y="306" class="t"><tspan class="kw">import</tspan> flyte</text>
+    <text x="40" y="326" class="t">env = flyte.TaskEnvironment(name=<tspan class="st">"trainer"</tspan>)</text>
+    <text x="40" y="358" class="t"><tspan class="dec">@env.task</tspan>(</text>
+    <text x="56" y="378" class="t">cache=flyte.Cache(behavior=<tspan class="st">"auto"</tspan>, serialize=<tspan class="nu">True</tspan>),</text>
+    <text x="40" y="398" class="t">)</text>
+    <text x="40" y="418" class="t"><tspan class="kw">async def</tspan> <tspan class="fn">train</tspan>(epochs: <tspan class="ty">int</tspan>) -&gt; <tspan class="ty">dict</tspan>:</text>
+    <text x="56" y="438" class="cm"># cache invalidates on epochs change or source edit</text>
+    <text x="56" y="458" class="t"><tspan class="kw">return</tspan> {<tspan class="st">"ok"</tspan>: <tspan class="nu">True</tspan>}</text>
   </g>
 
-  <!-- prompt cursor blink -->
-  <g>
-    <text x="24" y="488" fill="#d97757" font-size="14" font-weight="700">&gt;</text>
-    <rect x="42" y="476" width="8" height="16" fill="#e5e5e5">
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.5;0.99;1" dur="1s" begin="4s" repeatCount="indefinite"/>
-    </rect>
-  </g>
+  <!-- next prompt blink -->
+  <text x="24" y="504" class="prompt">&gt;</text>
+  <rect x="42" y="492" width="8" height="15" fill="#e6edf3">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.5;0.51;1" dur="1s" begin="3.2s" repeatCount="indefinite"/>
+  </rect>
 </svg>

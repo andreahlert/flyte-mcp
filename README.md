@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/demo.svg" alt="Claude Code using flyte-mcp" width="820" />
+  <img src="assets/demo.svg?v=2" alt="Claude Code using flyte-mcp" width="820" />
 </p>
 
 <h2 align="center">Install in one click</h2>
