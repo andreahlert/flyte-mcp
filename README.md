@@ -23,15 +23,15 @@
 <h2 align="center">Install in one click</h2>
 
 <p align="center">
-  <a href="https://cursor.com/install-mcp?name=flyte&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJmbHl0ZS1tY3AiXX0%3D">
+  <a href="cursor://anysphere.cursor-deeplink/mcp/install?name=flyte&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJmbHl0ZS1tY3AiXX0">
     <img src="https://img.shields.io/badge/Install_in-Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Install in Cursor"/>
   </a>
   &nbsp;
-  <a href="vscode:mcp/install?%7B%22name%22%3A%22flyte%22%2C%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22flyte-mcp%22%5D%7D">
+  <a href="vscode:mcp/install?%7B%22name%22%3A%22flyte%22%2C%22type%22%3A%22stdio%22%2C%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22flyte-mcp%22%5D%7D">
     <img src="https://img.shields.io/badge/Install_in-VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Install in VS Code"/>
   </a>
   &nbsp;
-  <a href="vscode-insiders:mcp/install?%7B%22name%22%3A%22flyte%22%2C%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22flyte-mcp%22%5D%7D">
+  <a href="vscode-insiders:mcp/install?%7B%22name%22%3A%22flyte%22%2C%22type%22%3A%22stdio%22%2C%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22flyte-mcp%22%5D%7D">
     <img src="https://img.shields.io/badge/Install_in-VS_Code_Insiders-24bfa5?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Install in VS Code Insiders"/>
   </a>
 </p>
