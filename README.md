@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/flyteorg/static-resources/main/common/flyte_circle_gradient_1_primary.svg" width="80" alt="Flyte" />
+  <img src="https://raw.githubusercontent.com/flyteorg/static-resources/main/common/flyte_circle_gradient_1_4x4.png" width="90" alt="Flyte" />
 </p>
 
 <h1 align="center">flyte-mcp</h1>
