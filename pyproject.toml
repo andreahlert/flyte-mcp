@@ -1,0 +1,27 @@
+[project]
+name = "flyte-mcp"
+version = "0.1.0"
+description = "MCP server exposing Flyte V2 SDK knowledge (symbols, patterns, examples) to AI assistants."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Andre Ahlert", email = "andre@aex.partners" }]
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.optional-dependencies]
+build = []
+
+[project.scripts]
+flyte-mcp = "flyte_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/flyte_mcp"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/flyte_mcp/data/flyte-v2-knowledge.json" = "flyte_mcp/data/flyte-v2-knowledge.json"
