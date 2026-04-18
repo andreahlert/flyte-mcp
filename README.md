@@ -10,8 +10,7 @@
 
 <p align="center">
   <a href="https://pypi.org/project/flyte-mcp/"><img src="https://img.shields.io/pypi/v/flyte-mcp?color=6f2aef&label=PyPI&logo=pypi&logoColor=white" alt="PyPI"/></a>
-  <a href="https://pypi.org/project/flyte-mcp/"><img src="https://img.shields.io/pypi/pyversions/flyte-mcp?color=3776ab&logo=python&logoColor=white" alt="Python"/></a>
-  <a href="https://pypi.org/project/flyte-mcp/"><img src="https://img.shields.io/pypi/dm/flyte-mcp?color=22c55e&label=downloads" alt="Downloads"/></a>
+  <a href="https://pypi.org/project/flyte-mcp/"><img src="https://img.shields.io/badge/python-3.10%2B-3776ab?logo=python&logoColor=white" alt="Python"/></a>
   <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-compatible-7c3aed?logo=anthropic&logoColor=white" alt="MCP"/></a>
   <a href="https://github.com/andreahlert/flyte-mcp/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License"/></a>
   <a href="https://github.com/andreahlert/flyte-mcp/stargazers"><img src="https://img.shields.io/github/stars/andreahlert/flyte-mcp?style=flat&color=f59e0b" alt="Stars"/></a>

@@ -6,9 +6,30 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Andre Ahlert", email = "andre@aex.partners" }]
+keywords = ["flyte", "mcp", "model-context-protocol", "claude", "cursor", "ai", "llm", "workflow", "orchestration"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
     "mcp>=1.0.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/andreahlert/flyte-mcp"
+Repository = "https://github.com/andreahlert/flyte-mcp"
+Issues = "https://github.com/andreahlert/flyte-mcp/issues"
+Registry = "https://github.com/andreahlert/flyte-plugin-registry"
 
 [project.optional-dependencies]
 build = []
