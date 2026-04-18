@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="820" height="440" rx="14" fill="url(#bg)"/>
+  <rect x="0" y="0" width="820" height="40" rx="14" fill="#161b22"/>
+  <rect x="0" y="26" width="820" height="14" fill="#161b22"/>
+
+  <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="66" cy="20" r="6" fill="#27c93f"/>
+  <text x="410" y="25" text-anchor="middle" fill="#8b949e" font-size="12">claude-code · flyte-mcp</text>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.3s" fill="freeze"/>
+    <text x="32" y="85" fill="#7c3aed" font-size="13" font-weight="700">&gt;</text>
+    <text x="50" y="85" fill="#c9d1d9" font-size="13">How do I cache a Flyte V2 task and invalidate on input change?</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.4s" fill="freeze"/>
+    <rect x="28" y="105" width="760" height="28" rx="6" fill="#1f2937" stroke="#30363d"/>
+    <text x="40" y="124" fill="#58a6ff" font-size="12" font-weight="600">● mcp:flyte</text>
+    <text x="130" y="124" fill="#8b949e" font-size="12">get_flyte_symbol(name="Cache")</text>
+    <text x="770" y="124" fill="#3fb950" font-size="12" text-anchor="end">✓</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.0s" fill="freeze"/>
+    <rect x="28" y="143" width="760" height="28" rx="6" fill="#1f2937" stroke="#30363d"/>
+    <text x="40" y="162" fill="#58a6ff" font-size="12" font-weight="600">● mcp:flyte</text>
+    <text x="130" y="162" fill="#8b949e" font-size="12">get_flyte_pattern(theme="caching")</text>
+    <text x="770" y="162" fill="#3fb950" font-size="12" text-anchor="end">✓</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.8s" fill="freeze"/>
+    <text x="32" y="200" fill="#3fb950" font-size="13" font-weight="700">◆</text>
+    <text x="50" y="200" fill="#c9d1d9" font-size="13">Use <tspan fill="#f0883e" font-family="ui-monospace">flyte.Cache</tspan> with a <tspan fill="#f0883e" font-family="ui-monospace">CachePolicy</tspan>. Input hashes invalidate automatically.</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.4s" fill="freeze"/>
+    <rect x="28" y="220" width="760" height="185" rx="8" fill="#0d1117" stroke="url(#accent)" stroke-width="1"/>
+    <rect x="28" y="220" width="760" height="24" rx="8" fill="#161b22"/>
+    <rect x="28" y="238" width="760" height="6" fill="#161b22"/>
+    <text x="42" y="237" fill="#8b949e" font-size="11">train.py</text>
+
+    <text x="42" y="265" fill="#ff7b72" font-size="12">import</text>
+    <text x="92" y="265" fill="#c9d1d9" font-size="12">flyte</text>
+
+    <text x="42" y="285" fill="#c9d1d9" font-size="12">env = flyte.TaskEnvironment(name=<tspan fill="#a5d6ff">"trainer"</tspan>)</text>
+
+    <text x="42" y="315" fill="#7ee787" font-size="12">@env.task(</text>
+    <text x="58" y="333" fill="#c9d1d9" font-size="12">cache=flyte.Cache(behavior=<tspan fill="#a5d6ff">"auto"</tspan>, serialize=<tspan fill="#79c0ff">True</tspan>),</text>
+    <text x="42" y="351" fill="#7ee787" font-size="12">)</text>
+
+    <text x="42" y="371" fill="#ff7b72" font-size="12">async def</text>
+    <text x="112" y="371" fill="#d2a8ff" font-size="12">train</text>
+    <text x="152" y="371" fill="#c9d1d9" font-size="12">(epochs: <tspan fill="#ffa657">int</tspan>) -&gt; <tspan fill="#ffa657">dict</tspan>:</text>
+
+    <text x="58" y="391" fill="#8b949e" font-size="12" font-style="italic"># cached by epochs; re-runs only when value changes</text>
+  </g>
+
+  <g>
+    <animate attributeName="opacity" values="0;0;1;1;0" dur="5s" begin="4s" repeatCount="indefinite"/>
+    <rect x="780" y="410" width="8" height="18" fill="#7c3aed" opacity="0.8"/>
+  </g>
+</svg>
