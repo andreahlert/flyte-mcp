@@ -1,6 +1,6 @@
 [project]
 name = "flyte-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server exposing Flyte V2 SDK knowledge (symbols, patterns, examples) to AI assistants."
 readme = "README.md"
 requires-python = ">=3.10"
